@@ -1,0 +1,5 @@
+fist;fist;5;0
+gun;shotgun;30;2
+gun;pistol;20;3
+knife;razor;15;10
+drug;drug;0;0

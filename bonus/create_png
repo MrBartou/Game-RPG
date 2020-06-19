@@ -1,0 +1,33 @@
+#!/usr/bin/env python3
+##
+## EPITECH PROJECT, 2020
+## MUL_my_rpg_2019
+## File description:
+## create_enemy
+##
+
+file = open("resrc/png/png.txt", "a")
+name = input("name enemy [char 32 max]: ")
+map = int(input("map [int]: "))
+x = int(input("x [int]: "))
+y = int(input("y [int]: "))
+dir = int(input("direction who see [int]: "))
+quest = int(input("quest [int]: "))
+fight = int(input("fight [int]: "))
+enemy = []
+print("enemy")
+for i in range (fight):
+    print("\t%d [char 32 max]: " % (i + 1), end = "")
+    enemy.append(input())
+print("texture (int)")
+body = int(input("\tbody [1:6]: "))
+head = int(input("\thead [0:48]: "))
+torso = int(input("\ttorso [0:24]: "))
+armor = int(input("\tarmor [0:36]: "))
+pants = int(input("\tpants [1:18]: "))
+shoes = int(input("\tshoes [0:6]: "))
+file.write("%s;%d;%d;%d;%d;%d;%d;" % (name, map, x, y, dir, quest, fight))
+for i in range (0, fight):
+    file.write("%s;" % enemy[i]) 
+file.write("%d;%d;%d;%d;%d;%d\n" % (body, head, torso, armor, pants, shoes))
+file.close()

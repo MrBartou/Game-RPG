@@ -1,0 +1,24 @@
+#!/usr/bin/env python3
+##
+## EPITECH PROJECT, 2020
+## MUL_my_rpg_2019
+## File description:
+## create_enemy
+##
+
+file = open("resrc/fight/enemy.txt", "a")
+name = input("name enemy [char 32 max]: ")
+pv = int(input("pv [int]: "))
+min = int(input("min damage [int]: "))
+max = int(input("max damage [int]: "))
+ammo = int(input("ammo [int]: "))
+gun = int(input("gun [int]: "))
+print("texture (int)")
+body = int(input("\tbody [1:6]: "))
+head = int(input("\thead [0:48]: "))
+torso = int(input("\ttorso [0:24]: "))
+armor = int(input("\tarmor [0:36]: "))
+pants = int(input("\tpants [1:18]: "))
+shoes = int(input("\tshoes [0:6]: "))
+file.write("%s;%d;%d;%d;%d;%d;%d;%d;%d;%d;%d;%d\n" % (name, pv, min, max, ammo, gun, body, head, torso, armor, pants, shoes))
+file.close()
